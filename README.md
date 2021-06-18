@@ -1,7 +1,14 @@
 # website_game_store
 
 
-Im Newbie Microservices Flask , this my EXAMS in phyton web progamming this web can session different admin or customer , login/register . give role admin/customer
+Im Newbie Microservices Flask 
+-------------------------------
+this my EXAMS in phyton web progamming this web can  
+----------------------------------------
+1. session different admin or customer , 
+2. login/register,
+3. give role admin/customer,
+4. upload image,upload files, export to pdf(filereader)
 
 
 How to setup
