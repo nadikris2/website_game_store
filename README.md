@@ -10,5 +10,4 @@ How to setup
 1. clone this repo git clone repo-url
 2. install all package pip install -r requirements.txt
 3. dump sql to your local machine
-4. make configuration file cp pos/config.example.py pos/config.py
-5. run project python run.py and visit localhost:5000
+4. run project python run.py and visit localhost:5000
