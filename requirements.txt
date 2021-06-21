@@ -1,0 +1,16 @@
+appdirs
+click
+Flask
+Flask-SQLAlchemy
+itsdangerous
+Jinja2
+MarkupSafe
+mysqlclient
+packaging
+pyparsing
+six
+SQLAlchemy
+Werkzeug
+Flask_SocketIO
+python-socketio
+PyMySQL
