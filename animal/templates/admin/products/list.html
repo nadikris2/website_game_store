@@ -1,0 +1,41 @@
+{% extends 'admin/base.html' %}
+
+{% block content %}
+<!-- tampilan untuk crud dan melihat isi data yang sudah masuk ke database-->
+<body>
+<table class="table " id="Inventory">
+    <thead class="thead-dark">
+    <tr>
+        {% for header in headings %}
+        <th>{{ header }}</th>
+        {% endfor %}
+    </tr>
+        </thead>
+        {% for row in data %}
+            <tr>
+                <td>
+                    {{ row.id }}
+                </td>
+                <td>
+                    {{ row.barang }}
+                </td>
+                <td>
+                    {{ row.harga }}
+                </td>
+                <td>
+                    {{ row.jumlah}}
+                </td>
+                <td>
+                    {{ row.user_id}}
+                </td>
+                <td>
+                    <img src="/static/image/{{ row.id }}.jpg" width="90" height="90"></td>
+                <td>
+                    <a href="/admin/products/update?id={{ row.id }}">edit</a>
+                    <a href="/admin/products/delete?id={{ row.id }}">delete</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table> 
+{% endblock %}
+</body>

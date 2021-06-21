@@ -1,0 +1,29 @@
+{% extends "admin/base.html" %} {% block title %}CRUD{% endblock %} {% block content
+    %}
+    <body>
+        <table class="table table-dark" id="User">
+            <thead class="thead-dark">
+            <tr>
+                {% for header in headings %}
+                <th>{{ header }}</th>
+                {% endfor %}
+            </tr>
+            </thead>
+                {% for row in data %}
+                <tr>
+                <td>{{ row.id }}</td>
+                <td>{{ row.nama }}</td>
+                <td>{{ row.email }}</td>
+                <td>{{ row.akses }}</td>
+                <td>
+                    <a href="/edituser?id={{row.id}}">
+                    <button type="button" class="btn btn-warning btn-sm" name="Edit">
+                        Edit</button></a>
+                    <a href="/deleteuser?id={{row.id}}">
+                    <button type="button" class="btn btn-danger btn-sm" name="Delete">
+                        Delete</button></a></td>
+                </tr>
+                {% endfor %}
+    </table><br>
+    </body>
+    {% endblock %}
