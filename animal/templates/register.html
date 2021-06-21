@@ -1,0 +1,27 @@
+
+{%include "error_message.html"%}
+  {% if current_user.is_anonymous %}
+<form method="POST">
+
+  {{ form.hidden_tag() }}
+
+  <p>
+      {{ form.username.label }}<br>
+      {{ form.username(size=32) }}<br>
+      {% for error in form.username.errors %}
+      <span style="color: blue;">[{{ error }}]</span>
+      {% endfor %}
+  </p>
+
+  <p>
+      {{ form.role.label }}<br>
+      {{ form.role}}<br>
+      {% for error in form.role.errors %}
+      <span style="color: blue;">[{{ error }}]</span>
+      {% endfor %}
+  </p>
+
+  <button type="submit" class="btn btn-primary">Register</button>
+</form>
+
+{%endif%}

@@ -1,0 +1,12 @@
+{%include "error_message.html"%}
+  {% if current_user.is_anonymous %}
+<form method="POST">
+{{ form.hidden_tag() }}
+          <p>
+            <div class="form-group">
+            <label for="username">{{ form.username.label }}<br>
+              {{ form.username(size=32) }}<br>   
+          </p>
+  <button type="submit" class="btn btn-primary">Login</button>
+</form>
+{%endif%}

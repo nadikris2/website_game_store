@@ -1,0 +1,36 @@
+{% extends "base.html" %} {% block title %}CRUD{% endblock %} {% block content
+    %}
+    <body>
+        <table class="table table-dark" id="message">
+            <thead class="thead-dark">
+            <tr>
+                {% for header in headings %}
+                <th>{{ header }}</th>
+                {% endfor %}
+            </tr>
+            </thead>
+                {% for row in data %}
+                <tr>
+                <td>{{ row.date }}</td>
+                <td>{{ row.nama_user }}</td>
+                <td>{{ row.message }}</td>
+                </tr>
+                {% endfor %}
+    </table>
+    <br>
+    <form method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control"
+            id="message"
+            name="message"
+            placeholder="Kirim Message"
+          />
+        </div>
+        <br />
+        <button type="submit" class="btn btn-primary">Kirim</button>
+      </form>
+    
+    </body>
+    {% endblock %}
